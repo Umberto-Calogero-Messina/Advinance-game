@@ -1,0 +1,35 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+.button {
+  width: 104px;
+  height: 31px;
+  padding: 8px, 34px;
+  border-radius: 6px;
+  border: none;
+  background-color: #992525;
+  color: #ffd2b1;
+  margin-bottom: 25px;
+
+  @include hover {
+    background-color: #d67400;
+  }
+  &:active {
+    background-color: #670e0e;
+  }
+
+  &--change {
+    width: 244px;
+    height: 31px;
+    padding: 8px, 34px;
+    border-radius: 6px;
+    border: 1px solid #992525;
+    background-color: transparent;
+    margin-bottom: 25px;
+    @include hover {
+      border: 1px solid #d67400;
+    }
+    &:active {
+      border: 1px solid #670e0e;
+    }
+  }
+}
