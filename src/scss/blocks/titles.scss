@@ -1,23 +1,32 @@
 .title {
   font-family: 'Alfa Slab One', serif;
   font-weight: 400;
-  font-size: 40px;
-  line-height: 55px;
+  font-size: 2.5rem;
+  line-height: 3.4375rem;
   letter-spacing: 1%;
   color: #992525;
 }
 .title__box {
-  margin-bottom: 13px;
+  margin-bottom: 0.8125rem;
 }
 
 .subtitle {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
   color: #ffffff;
 }
 
 .subtitle__box {
-  margin-bottom: 47px;
+  margin-bottom: 2.9375rem;
+}
+
+.hint__title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 0.8125rem;
+  line-height: 0.75rem;
+  color: #992525;
+  margin-bottom: 0.5rem;
 }

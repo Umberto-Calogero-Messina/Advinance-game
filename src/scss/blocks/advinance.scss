@@ -40,7 +40,7 @@
       color: rgba(153, 37, 37, 0.55);
     }
     &:focus {
-      border: 1px solid #992525;
+      border: 0.0625rem solid #992525;
       color: rgba(153, 37, 37);
     }
 
@@ -50,7 +50,8 @@
   }
 }
 
-.hint {
+.hint,
+.solution {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,6 +61,9 @@
   font-weight: 500;
   font-size: 0.75rem;
   line-height: 0.75rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
   @include hover {
     color: #d67400;
   }
@@ -96,4 +100,13 @@
       color: #670e0e;
     }
   }
+}
+
+.hint-container {
+  margin-top: 0.625rem;
+}
+
+.hint__text {
+  display: block;
+  margin-top: 0.3125rem;
 }
