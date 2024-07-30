@@ -1,6 +1,9 @@
 import '../scss/styles.scss';
 import { riddles } from './advinance';
 
+import iconCheck from '../assets/images/check_small.png';
+import iconCancel from '../assets/images/cancel.png';
+
 const advinanceElement = document.getElementById('advinance-title');
 const solutionElement = document.getElementById('advinance-solution');
 const hintElement = document.getElementById('hint');
@@ -87,7 +90,7 @@ const toggleElements = disabled => {
 
 const showModal = (message, isCorrect) => {
   modalText.innerHTML = '';
-  modalImage.src = isCorrect ? './assets/images/check_small.png' : './assets/images/cancel.png';
+  modalImage.src = isCorrect ? iconCheck : iconCancel;
 
   const fragment = document.createDocumentFragment();
 
