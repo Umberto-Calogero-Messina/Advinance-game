@@ -92,17 +92,23 @@ const toggleElements = disabled => {
   hintElement.disabled = disabled;
 };
 
-const showModal = (message, isCorrect, additionalMessage) => {
+const showModal = (message, isCorrect, additionalMessage, hideIcon = false) => {
   modalText.innerHTML = '';
-  modalImage.src = isCorrect ? iconCheck : iconCancel;
+  if (hideIcon) {
+    modalImage.src = iconCancel;
+  } else {
+    modalImage.src = isCorrect ? iconCheck : iconCancel;
+  }
 
   const fragment = document.createDocumentFragment();
 
+  // Añadir el mensaje principal
   const messageDiv = createModalDiv(message);
   fragment.append(messageDiv);
 
+  // Añadir el mensaje adicional con clase modal__subtext si es necesario
   if (additionalMessage) {
-    const additionalDiv = createModalDiv(additionalMessage);
+    const additionalDiv = createModalDiv(additionalMessage, 'modal__subtext');
     fragment.append(additionalDiv);
   }
 
@@ -115,9 +121,12 @@ const showModal = (message, isCorrect, additionalMessage) => {
   modal.classList.add('d-flex');
 };
 
-const createModalDiv = text => {
+const createModalDiv = (text, className) => {
   const div = document.createElement('div');
   div.textContent = text;
+  if (className) {
+    div.classList.add(className);
+  }
   return div;
 };
 
@@ -128,7 +137,7 @@ const hideModal = () => {
 
 const showSolution = () => {
   const correctAnswer = riddles[randomIndex].answer;
-  showModal(`La respuesta correcta era ${correctAnswer}.`, true);
+  showModal(`La respuesta era: ${correctAnswer}.`, true, '', true);
   toggleElements(true);
   buttonSolutionElement.classList.add('d-none');
   hintElement.classList.add('d-none');
