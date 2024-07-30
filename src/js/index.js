@@ -98,11 +98,9 @@ const showModal = (message, isCorrect, additionalMessage) => {
 
   const fragment = document.createDocumentFragment();
 
-  // Crear un div para el mensaje principal
   const messageDiv = createModalDiv(message);
   fragment.append(messageDiv);
 
-  // Crear un div para el mensaje adicional, si existe
   if (additionalMessage) {
     const additionalDiv = createModalDiv(additionalMessage);
     fragment.append(additionalDiv);
