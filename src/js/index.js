@@ -66,7 +66,11 @@ const checkAnswer = () => {
   const userAnswer = inputElement.value.toLowerCase();
   const correctAnswer = riddles[randomIndex].answer.toLowerCase();
   const isCorrect = userAnswer === correctAnswer;
-  showModal(isCorrect ? `¡HAS ACERTADO! La respuesta es ${correctAnswer}` : 'RESPUESTA INCORRECTA', isCorrect);
+  showModal(
+    isCorrect ? `¡HAS ACERTADO!` : 'RESPUESTA INCORRECTA',
+    isCorrect,
+    isCorrect ? `La respuesta es ${correctAnswer}` : ''
+  );
   if (isCorrect) toggleElements(true);
   inputElement.value = '';
 };
@@ -88,23 +92,25 @@ const toggleElements = disabled => {
   hintElement.disabled = disabled;
 };
 
-const showModal = (message, isCorrect) => {
+const showModal = (message, isCorrect, additionalMessage) => {
   modalText.innerHTML = '';
   modalImage.src = isCorrect ? iconCheck : iconCancel;
 
   const fragment = document.createDocumentFragment();
 
-  if (isCorrect) {
-    fragment.append(createModalDiv('¡HAS ACERTADO! '), createModalDiv(`La respuesta es ${message.split(' ').pop()}`));
-    modalButton.textContent = 'Probar con otra adivinanza';
-    modalButton.removeEventListener('click', hideModal);
-    modalButton.addEventListener('click', initializeRiddle);
-  } else {
-    fragment.append(createModalDiv(message));
-    modalButton.textContent = 'Intentar de nuevo';
-    modalButton.removeEventListener('click', initializeRiddle);
-    modalButton.addEventListener('click', hideModal);
+  // Crear un div para el mensaje principal
+  const messageDiv = createModalDiv(message);
+  fragment.append(messageDiv);
+
+  // Crear un div para el mensaje adicional, si existe
+  if (additionalMessage) {
+    const additionalDiv = createModalDiv(additionalMessage);
+    fragment.append(additionalDiv);
   }
+
+  modalButton.textContent = isCorrect ? 'Probar con otra adivinanza' : 'Intentar de nuevo';
+  modalButton.removeEventListener('click', isCorrect ? hideModal : initializeRiddle);
+  modalButton.addEventListener('click', isCorrect ? initializeRiddle : hideModal);
 
   modalText.append(fragment);
   modal.classList.remove('d-none');
@@ -113,9 +119,7 @@ const showModal = (message, isCorrect) => {
 
 const createModalDiv = text => {
   const div = document.createElement('div');
-  const span = document.createElement('span');
-  span.textContent = text;
-  div.append(span);
+  div.textContent = text;
   return div;
 };
 
@@ -126,7 +130,7 @@ const hideModal = () => {
 
 const showSolution = () => {
   const correctAnswer = riddles[randomIndex].answer;
-  showModal(`La respuesta correcta es ${correctAnswer}.`, true);
+  showModal(`La respuesta correcta era ${correctAnswer}.`, true);
   toggleElements(true);
   buttonSolutionElement.classList.add('d-none');
   hintElement.classList.add('d-none');
