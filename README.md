@@ -1,18 +1,14 @@
-# Título del proyecto
+# Juego de adivinanza
 
-![Imagen del proyecto](https://github.com/eduardofierropro/Portafolio-y-CV/blob/main/IMAGEN-DEL-PROYECTO.jpg?raw=true)
+![Imagen del proyecto](https://github.com/Umberto-Calogero-Messina/Advinance-game/blob/main/src/assets/images/Advinance-game_preview.png?raw=true)
 
 ## Ejemplo en vivo
 
-- [URL-de-github-pages-de-este-proyecto](URL-de-github-pages-de-este-proyecto)
+- [URL-de-github-pages-de-este-proyecto](https://umberto-calogero-messina.github.io/Advinance-game/)
 
 ## Descripción 📑
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum et esse, ipsum ipsam debitis ducimus dolorum placeat? Consectetur, soluta vero. Accusamus iure est pariatur, doloremque nam cumque natus unde adipisci laborum ut. At id sapiente consequatur earum. Magnam doloribus, voluptate zumito doloremque obcaecati vel excepturi numquam cupiditate ipsam quisquam!
-
-## ¿Qué he aprendido en este proyecto? 🙇🏻
-
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum et esse, ipsum ipsam debitis ducimus dolorum placeat? Consectetur, soluta vero. Accusamus iure est pariatur, doloremque nam cumque natus unde adipisci laborum ut. At id sapiente consequatur earum. Magnam doloribus, voluptate zumito doloremque obcaecati vel excepturi numquam cupiditate ipsam quisquam!
+Adivinance Game es un juego interactivo de adivinanzas donde el objetivo es descubrir una palabra secreta generada aleatoriamente dentro de un rango determinado. El jugador debe ingresar su suposición y recibirá pistas hasta que logre acertar.
 
 ## Tecnologías 🛠
 
@@ -20,21 +16,12 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum et esse, 
 
 [![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://es.wikipedia.org/wiki/HTML5)
 [![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://es.wikipedia.org/wiki/CSS)
-
-## Vista previa del proyecto
-
-Si quieres echar un vistazo al proyecto, te recomiendo:
-
-![Captura del proyecto](https://github.com/eduardofierropro/Portafolio-y-CV/blob/main/CAPTURA-DEL-PROYECTO.jpg?raw=true)
-![Captura del proyecto](https://github.com/eduardofierropro/Portafolio-y-CV/blob/main/CAPTURA-DEL-PROYECTO.jpg?raw=true)
-![Captura del proyecto](https://github.com/eduardofierropro/Portafolio-y-CV/blob/main/CAPTURA-DEL-PROYECTO.jpg?raw=true)
+[![CSS](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://es.wikipedia.org/wiki/JavaScript)
 
 ## Autor ✒️
 
-**TU NOMBRE**
-
-- [micorreo@midominio.com](micorreo@midominio.com)
-- [LinkedIn](https://www.linkedin.com/in/tu-url-de-linkedin/)
+**Umberto Calogero Messina**
+- [LinkedIn](https://www.linkedin.com/in/umberto-calogero-messina-9b716026b/)
 
 ## Instalación
 
