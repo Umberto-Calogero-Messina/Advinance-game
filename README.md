@@ -21,7 +21,9 @@ Adivinance Game es un juego interactivo de adivinanzas donde el objetivo es desc
 ## Autor ✒️
 
 **Umberto Calogero Messina**
+
 - [LinkedIn](https://www.linkedin.com/in/umberto-calogero-messina-9b716026b/)
+- [ucmessina@gmail.com](ucmessina@gmail.com)
 
 ## Instalación
 
